@@ -80,21 +80,37 @@ public class TimeTask: Codable
     public var State: TaskState
     
     /**
-     Start of the available data fetched from the backend.
+     Current time range entry that will be put into the list in the next update
      
      */
-    public var DataStartTime: Date
+    public var CurrentTimeSpan: TimeSpan
     
     /**
      History of previous usage
      */
-    public var History: [TimeSpan]
+    public var History: [TimeSpan] = []
     
     /**
      Category
      */
     public var TaskCategory: TaskCategory
     
+    
+    public convenience init(Title: String, Desription: String)
+    {
+        self.init(Id: Int.random(in: 1...10), Title: Title, Description: Desription, State: .Stopped, CurrentTimeSpan: .init(StartTime: .now), History: [], TaskCategory: .init(CategoryName: "Work", CategoryColor: .purple))
+    }
+    
+    public init(Id: Int, Title: String, Description: String, State: TaskState, CurrentTimeSpan: TimeSpan, History: [TimeSpan], TaskCategory: TaskCategory) {
+        self.Id = Id
+        self.Title = Title
+        self.Description = Description
+        self.State = State
+        self.CurrentTimeSpan = CurrentTimeSpan
+        self.History = History
+        self.TaskCategory = TaskCategory
+    }
+
     public func ToJsonString() throws -> String
     {
         let encoder: JSONEncoder = JSONEncoder()
@@ -107,7 +123,7 @@ public class TimeTask: Codable
         return jsonString
     }
     
-    static func FromJSONString(jsonString: String) throws -> TimeTask {
+    public static func FromJSONString(jsonString: String) throws -> TimeTask {
         guard let jsonData = jsonString.data(using: .utf8) else {
             throw DecodingError.dataCorrupted(.init(codingPath: [], debugDescription: "Could not decode string \(jsonString)"))
         }

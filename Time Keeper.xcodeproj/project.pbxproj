@@ -19,6 +19,14 @@
 		1F47ACFD2A88218600B7AF6C /* TimeTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F47ACFC2A88218600B7AF6C /* TimeTask.swift */; };
 		1F47ACFF2A88271200B7AF6C /* TaskState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F47ACFE2A88271200B7AF6C /* TaskState.swift */; };
 		1F47AD012A883FD700B7AF6C /* TimeSpan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F47AD002A883FD700B7AF6C /* TimeSpan.swift */; };
+		1F47AD032A8847B000B7AF6C /* TimeTaskRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F47AD022A8847B000B7AF6C /* TimeTaskRow.swift */; };
+		1F47AD052A88489C00B7AF6C /* TimeTaskViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F47AD042A88489C00B7AF6C /* TimeTaskViewModel.swift */; };
+		1F47AD072A885FAA00B7AF6C /* TimeTasksController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F47AD062A885FAA00B7AF6C /* TimeTasksController.swift */; };
+		1F47AD092A88640E00B7AF6C /* Controller in Resources */ = {isa = PBXBuildFile; fileRef = 1F47AD082A88640E00B7AF6C /* Controller */; };
+		1F47AD0B2A88642500B7AF6C /* TimeTasksController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F47AD0A2A88642500B7AF6C /* TimeTasksController.swift */; };
+		1F47AD0D2A88642800B7AF6C /* TimeTasksController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F47AD0C2A88642800B7AF6C /* TimeTasksController.swift */; };
+		1F47AD0F2A88642C00B7AF6C /* TimeTasksController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F47AD0E2A88642C00B7AF6C /* TimeTasksController.swift */; };
+		1F47AD112A88643600B7AF6C /* TimeTaskViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F47AD102A88643500B7AF6C /* TimeTaskViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +63,14 @@
 		1F47ACFC2A88218600B7AF6C /* TimeTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTask.swift; sourceTree = "<group>"; };
 		1F47ACFE2A88271200B7AF6C /* TaskState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskState.swift; sourceTree = "<group>"; };
 		1F47AD002A883FD700B7AF6C /* TimeSpan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeSpan.swift; sourceTree = "<group>"; };
+		1F47AD022A8847B000B7AF6C /* TimeTaskRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTaskRow.swift; sourceTree = "<group>"; };
+		1F47AD042A88489C00B7AF6C /* TimeTaskViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTaskViewModel.swift; sourceTree = "<group>"; };
+		1F47AD062A885FAA00B7AF6C /* TimeTasksController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTasksController.swift; sourceTree = "<group>"; };
+		1F47AD082A88640E00B7AF6C /* Controller */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Controller; sourceTree = "<group>"; };
+		1F47AD0A2A88642500B7AF6C /* TimeTasksController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTasksController.swift; sourceTree = "<group>"; };
+		1F47AD0C2A88642800B7AF6C /* TimeTasksController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTasksController.swift; sourceTree = "<group>"; };
+		1F47AD0E2A88642C00B7AF6C /* TimeTasksController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTasksController.swift; sourceTree = "<group>"; };
+		1F47AD102A88643500B7AF6C /* TimeTaskViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTaskViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				1F47ACF82A881F5100B7AF6C /* LandingPage.swift */,
+				1F47AD022A8847B000B7AF6C /* TimeTaskRow.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -164,6 +181,13 @@
 		1F47ACF72A881F0B00B7AF6C /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				1F47AD0C2A88642800B7AF6C /* TimeTasksController.swift */,
+				1F47AD0E2A88642C00B7AF6C /* TimeTasksController.swift */,
+				1F47AD042A88489C00B7AF6C /* TimeTaskViewModel.swift */,
+				1F47AD0A2A88642500B7AF6C /* TimeTasksController.swift */,
+				1F47AD102A88643500B7AF6C /* TimeTaskViewModel.swift */,
+				1F47AD082A88640E00B7AF6C /* Controller */,
+				1F47AD062A885FAA00B7AF6C /* TimeTasksController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -274,6 +298,7 @@
 			files = (
 				1F47ACD32A87E45100B7AF6C /* Preview Assets.xcassets in Resources */,
 				1F47ACCF2A87E45100B7AF6C /* Assets.xcassets in Resources */,
+				1F47AD092A88640E00B7AF6C /* Controller in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,11 +324,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F47ACCD2A87E45000B7AF6C /* ContentView.swift in Sources */,
+				1F47AD0D2A88642800B7AF6C /* TimeTasksController.swift in Sources */,
 				1F47AD012A883FD700B7AF6C /* TimeSpan.swift in Sources */,
 				1F47ACCB2A87E45000B7AF6C /* Time_KeeperApp.swift in Sources */,
+				1F47AD112A88643600B7AF6C /* TimeTaskViewModel.swift in Sources */,
+				1F47AD072A885FAA00B7AF6C /* TimeTasksController.swift in Sources */,
+				1F47AD052A88489C00B7AF6C /* TimeTaskViewModel.swift in Sources */,
 				1F47ACFD2A88218600B7AF6C /* TimeTask.swift in Sources */,
 				1F47ACF92A881F5100B7AF6C /* LandingPage.swift in Sources */,
 				1F47ACFF2A88271200B7AF6C /* TaskState.swift in Sources */,
+				1F47AD0F2A88642C00B7AF6C /* TimeTasksController.swift in Sources */,
+				1F47AD0B2A88642500B7AF6C /* TimeTasksController.swift in Sources */,
+				1F47AD032A8847B000B7AF6C /* TimeTaskRow.swift in Sources */,
 				1F47ACFB2A88216A00B7AF6C /* TaskCategory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
