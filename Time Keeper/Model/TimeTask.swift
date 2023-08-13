@@ -57,7 +57,7 @@ import Foundation
  
  */
 
-public class TimeTask: Codable
+public class TimeTask: Codable, Identifiable
 {
     /**
      Id to identify instance uniquely
@@ -98,7 +98,7 @@ public class TimeTask: Codable
     
     public convenience init(Title: String, Desription: String)
     {
-        self.init(Id: Int.random(in: 1...10), Title: Title, Description: Desription, State: .Stopped, CurrentTimeSpan: .init(StartTime: .now), History: [], TaskCategory: .init(CategoryName: "Work", CategoryColor: .purple))
+        self.init(Id: Int.random(in: 1...10), Title: Title, Description: Desription, State: .Stopped, CurrentTimeSpan: .init(StartTime: .now), History: [], TaskCategory: .init(Id: 1, CategoryName: "Work", CategoryColor: .purple))
     }
     
     public init(Id: Int, Title: String, Description: String, State: TaskState, CurrentTimeSpan: TimeSpan, History: [TimeSpan], TaskCategory: TaskCategory) {

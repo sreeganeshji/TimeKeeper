@@ -15,21 +15,30 @@ struct TimeTaskRow: View {
             VStack(alignment:.leading)
             {
                 Text(timeTaskViewModel.task.Title)
-                    .font(.headline)
+                    .font(.title2)
                 Text(timeTaskViewModel.task.Description)
                     .lineLimit(1)
                     .truncationMode(.tail)
             }
             Spacer()
             Text("23:12")
-            Button(action: {
-                
-            }) {
+            Button(action:
+            {
+                if(timeTaskViewModel.isRunning)
+                {
+                    
+                }
+                else
+                {
+                    
+                }
+            })
+            {
                 Image(systemName: timeTaskViewModel.isRunning ? "play.fill" : "stop.fill")
             }
         }
         .frame(height: 50)
-        .padding(.horizontal)
+//        .padding(.horizontal)
     }
 }
 

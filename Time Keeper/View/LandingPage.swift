@@ -10,10 +10,12 @@ import SwiftUI
 struct LandingPage: View {
     @State private var selectedTab = 0
     
+    let tasks: [TimeTask] = [.init(Title: "Work Tasks", Desription: "Lots of cool stuff to work and learn aobut"), .init(Title: "School tasks", Desription: "Working on school assignments")]
+    
     var body: some View {
         TabView(selection: $selectedTab)
         {
-            Text("Tab 1 Content")
+            TimeTasksPage(timeTasksController: .init(tasks: tasks))
                  .tabItem {
                      Image(systemName: "1.circle")
                      Text("Tab 1")

@@ -7,7 +7,7 @@
 
 import Foundation
 
-public class TimeTaskViewModel: ObservableObject
+public class TimeTaskViewModel: ObservableObject, Identifiable
 {
     @Published var task: TimeTask
     @Published var isRunning: Bool = false
